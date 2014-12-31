@@ -1,7 +1,7 @@
 {
   "name": "ember-cli-transition-to-dynamic",
-  "version": "0.0.0",
-  "description": "The default blueprint for ember-cli addons.",
+  "version": "0.0.1",
+  "description": "Transition to any route preserving or replacing any dynamic segment.",
   "directories": {
     "doc": "doc",
     "test": "tests"
@@ -11,12 +11,19 @@
     "build": "ember build",
     "test": "ember test"
   },
-  "repository": "",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kellyselden/ember-cli-transition-to-dynamic.git"
+  },
   "engines": {
     "node": ">= 0.10.0"
   },
-  "author": "",
+  "author": "Kelly Selden",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kellyselden/ember-cli-transition-to-dynamic/issues"
+  },
+  "homepage": "https://github.com/kellyselden/ember-cli-transition-to-dynamic",
   "devDependencies": {
     "broccoli-asset-rev": "^2.0.0",
     "broccoli-ember-hbs-template-compiler": "^1.6.1",
@@ -33,6 +40,9 @@
     "glob": "^4.0.5"
   },
   "keywords": [
+    "ember",
+    "ember.js",
+    "ember-cli",
     "ember-addon"
   ],
   "ember-addon": {
