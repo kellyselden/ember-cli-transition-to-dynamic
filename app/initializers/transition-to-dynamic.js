@@ -1,12 +1,17 @@
-function transitionToDynamic(name, segments) {
+function transitionToDynamic(name, routesWithSegments) {
   var routes = this.router.router.currentHandlerInfos;
   var models = [];
   for (var i = 0; i < routes.length; i++) {
-    var params = routes[i].params;
+    var route = routes[i];
+    var params = route.params;
+    var routeSegments = routesWithSegments[route.name];
     for (var param in params) {
-      if (params.hasOwnProperty(param)) {
-        models.push(segments[param] || params[param]);
+      if (!params.hasOwnProperty(param)) continue;
+      var segment = params[param];
+      if (routeSegments && routeSegments[param]) {
+        segment = routeSegments[param];
       }
+      models.push(segment);
     }
   }
 
