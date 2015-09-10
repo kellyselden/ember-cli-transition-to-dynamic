@@ -4,8 +4,10 @@ function transitionToDynamic(name, routesWithSegments) {
   for (var i = 0; i < routes.length; i++) {
     var route = routes[i];
     var params = route.params;
+    var names = route._names;
     var routeSegments = routesWithSegments[route.name];
-    for (var param in params) {
+    for (var x = 0; x < names.length; x++) {
+      var param = names[x];
       if (!params.hasOwnProperty(param)) continue;
       var segment = params[param];
       if (routeSegments && routeSegments[param]) {
