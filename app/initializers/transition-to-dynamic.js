@@ -5,11 +5,12 @@ function transitionToDynamic(name, routesWithSegments) {
 
     // using route._names instead of route.params because
     // the latter's order is not guaranteed
-    route._names.forEach(param => {
-      var paramsSource = routeSegments && routeSegments[param]
-        ? routeSegments : route.params;
-      models.push(paramsSource[param]);
-    });
+    if (route._names && route._names.forEach) {
+      route._names.forEach(param => {
+        var paramsSource = routeSegments && routeSegments[param] ? routeSegments : route.params;
+        models.push(paramsSource[param]);
+      });
+    }
   });
 
   var args = models.slice();
