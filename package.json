@@ -1,6 +1,6 @@
 {
   "name": "ember-cli-transition-to-dynamic",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Transition to any route preserving or replacing any dynamic segment.",
   "directories": {
     "doc": "doc",
